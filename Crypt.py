@@ -93,7 +93,7 @@ class XOR:
         to_return = []
         for i in range(len(data)):
             val = data[i]
-            for mask in self.key[str(i)][::-1]:
+            for mask in self.key[str(i)]:
                 val = val^mask
             to_return.append(val)
         return encrypted(to_return)
